@@ -38,7 +38,7 @@
     <bpmn:sequenceFlow id="Flow_06xo1t0" name="is_safe == True" sourceRef="Gateway_0vqsmxy" targetRef="Activity_0fmjk85">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">is_safe == True</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0wkvu0e" name="is_safe == Flase" sourceRef="Gateway_0vqsmxy" targetRef="Activity_0mwove7">
+    <bpmn:sequenceFlow id="Flow_0wkvu0e" name="is_safe == False" sourceRef="Gateway_0vqsmxy" targetRef="Activity_0mwove7">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">is_safe == False</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:endEvent id="Event_1pkdfjl">
