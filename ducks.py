@@ -13,13 +13,20 @@ def show_form(task):
     for field in form.fields:
         prompt = field.label
         if isinstance(field, EnumFormField):
-            prompt += "? (Options: " + ', '.join([str(option.id) for option in field.options]) + ")"
-        prompt += "? "
+            prompt += " (Options: " + ', '.join([str(option.id) for option in field.options]) + ")"
+        if field.type == "boolean":
+            prompt += " (Options: true, false)"
+        prompt += " : "
         answer = input(prompt)
         if field.type == "long":
             answer = int(answer)
+        if field.type == "boolean":
+            answer = answer.lower().strip()
+            answer = (answer == 'true' or answer == 'yes')
+            
         task.update_data_var(field.id, answer)
-
+        
+        
 parser = CamundaParser()
 parser.add_bpmn_file('ducks.bpmn')
 spec = parser.get_spec('duck_process')
