@@ -1,4 +1,4 @@
-SpiffExample
+SpiffyDuck
 ==============
 This GIT respository contains code to go along with the blog post
 "Build your own Low-Code Business Applications with SpiffWorkflow"
@@ -55,7 +55,7 @@ Now that we have the Python virtual environment set up, let's get our requiremen
     pip3 install spiffworkflow
 
 This should get us all of the tools we will need to run the examples - Any of the .py files should be able to be run
-in the SpiffExample main directory
+in the SpiffyDuck main directory
 
 .. code:: bash
 
